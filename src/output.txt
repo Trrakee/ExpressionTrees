@@ -1,0 +1,129 @@
+Inorder traversal --> 2 + 3 * 4
+Parenthesized exp --> 2 + 3 * 4
+The value of this expression is = 14.0
+
+(+ 2
+   (* 3 4))
+
+
+Inorder traversal --> 2 + 3 * 4
+Parenthesized exp --> (2 + 3) * 4
+The value of this expression is = 20.0
+
+(* (+ 2 3)
+   4)
+
+
+Inorder traversal --> 2 - 3 + 4
+Parenthesized exp --> 2 - 3 + 4
+The value of this expression is = 3.0
+
+(+ (- 2 3)
+   4)
+
+
+Inorder traversal --> 2 - 3 + 4
+Parenthesized exp --> 2 - (3 + 4)
+The value of this expression is = -5.0
+
+(- 2
+   (+ 3 4))
+
+
+Inorder traversal --> 2 + 3 * 4 + 5
+Parenthesized exp --> 2 + 3 * 4 + 5
+The value of this expression is = 19.0
+
+(+ (+ 2
+      (* 3 4))
+   5)
+
+
+Inorder traversal --> 2 + 3 * 4 + 5
+Parenthesized exp --> 2 + (3 * 4 + 5)
+The value of this expression is = 19.0
+
+(+ 2
+   (+ (* 3 4)
+      5))
+
+
+Inorder traversal --> 2 + 3 * 4 + 5
+Parenthesized exp --> (2 + 3) * (4 + 5)
+The value of this expression is = 45.0
+
+(* (+ 2 3)
+   (+ 4 5))
+
+
+Inorder traversal --> 2 + 3 * 4 + 5
+Parenthesized exp --> 2 + 3 * (4 + 5)
+The value of this expression is = 29.0
+
+(+ 2
+   (* 3
+      (+ 4 5)))
+
+
+Inorder traversal --> neg 2 ^ 3
+Parenthesized exp --> -2^3
+The value of this expression is = -8.0
+
+(neg ()
+     (^ 2 3))
+
+
+Inorder traversal --> neg 2 ^ 3
+Parenthesized exp --> (-2)^3
+The value of this expression is = -8.0
+
+(^ (neg () 2)
+   3)
+
+
+Inorder traversal --> neg 2 ^ 3 ^ 4
+Parenthesized exp --> (-2)^(3^4)
+The value of this expression is = -2.4178516392292583E24
+
+(^ (neg () 2)
+   (^ 3 4))
+
+
+Inorder traversal --> neg 2 ^ 3 ^ 4
+Parenthesized exp --> (-2)^3^4
+The value of this expression is = 4096.0
+
+(^ (^ (neg () 2)
+      3)
+   4)
+
+
+Inorder traversal --> 1 + 2 * 3 - 4 ^ 5 / 6
+Parenthesized exp --> 1 + 2 * 3 - 4^5 / 6
+The value of this expression is = -163.66666666666666
+
+(- (+ 1
+      (* 2 3))
+   (/ (^ 4 5)
+      6))
+
+
+Inorder traversal --> 1 / 2 + 3 * 3 ^ 2
+Parenthesized exp --> (1 / 2 + 3) * 3^2
+The value of this expression is = 31.5
+
+(* (+ (/ 1 2)
+      3)
+   (^ 3 2))
+
+
+Inorder traversal --> neg -1 + sqrt -1 ^ 2 - 4 * 1 * -1 / 2 * 1
+Parenthesized exp --> (--1 + sqrt(-1^2 - 4 * 1 * -1)) / (2 * 1)
+The value of this expression is = 1.618033988749895
+
+(/ (+ (neg () -1)
+      (sqrt ()
+            (- (^ -1 2)
+               (* (* 4 1)
+                  -1))))
+   (* 2 1))
