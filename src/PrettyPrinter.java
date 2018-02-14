@@ -6,7 +6,6 @@
  | File Info: PrettyPrinter.java    |
  ----------------------------------
  */
-
 /**
  The prettyPrint() method takes a BTree and
  converts it into a well formated string.
@@ -26,7 +25,6 @@ public class PrettyPrinter
    {
       return prettyPrint(tree, "  ", false);
    }
-
    /**
     This prettyPrint() method is essentially a
     preorder traversal of the tree.

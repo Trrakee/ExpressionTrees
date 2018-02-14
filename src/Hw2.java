@@ -34,7 +34,6 @@ public class Hw2
             " / + neg -1 sqrt - ^ -1 2 * * 4 1 -1 * 2 1"
           };
 
-
       for (int i = 0; i < prefix.length; i++)
       {
          BTree expTree = BuildBTree.buildBTree( prefix[i] );

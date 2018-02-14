@@ -6,7 +6,6 @@
  | File Info: Evaluate.java         |
  ----------------------------------
  */
-
 /**
    The eval() method takes a BTree that is an expression tree
    and evaluates it to a double value.
@@ -53,6 +52,7 @@ public class Evaluate {
             throw new ArithmeticException("Divide by zero is undefined!");
          return eval(tree.getLeftTree()) / right;
       }
+
       else if (tree.getElement().equals("%")) {
          double right = eval(tree.getRightTree());
 
@@ -60,9 +60,7 @@ public class Evaluate {
             throw new ArithmeticException("Mod by zero exception");
          return eval(tree.getLeftTree()) % right;
       }
-      //Converting String type to double
       else
          return Double.parseDouble(tree.getElement());
    }//eval()
-
 }//Evaluate
