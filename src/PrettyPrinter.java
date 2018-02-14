@@ -48,8 +48,8 @@ public class PrettyPrinter
             stringIndent = stringIndent + " ";
          }
          result += " " + prettyPrint(tree.getLeftTree(), indentation + "  " + stringIndent,inline);
-         result += "\n" + indentation + stringIndent + prettyPrint(tree.getRightTree(), indentation + "  " ,inline);
-         result +=  indentation.substring(0, indentation.length() - 2) + ")";
+         result += "\n" + indentation + stringIndent + prettyPrint(tree.getRightTree(), indentation + "  " + stringIndent,inline);
+         result +=  indentation.substring(indentation.length()) + ")";
       }
       return result;
    }

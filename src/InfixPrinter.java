@@ -1,6 +1,5 @@
 /*
 
-
 */
 
 /**
@@ -34,24 +33,48 @@ public class InfixPrinter
      */
     public static String infixPrint(BTree tree)
     {
+
+
         String result = "";
-        if (tree == null)
-            return "";   //don't try to do anything if tree is null
-        else if (precedence(infixPrint(tree.getLeftTree())) < precedence(tree.getElement()))
+        if ( tree != null )
         {
-
-            result += "(" +infixPrint( tree.getLeftTree() ) +" "+ tree.getElement() + " ";
-            result += infixPrint( tree.getRightTree()) + ")" ;
+    //left branch
+            if(tree.getLeftTree() != null)
+            {
+                if(precedence(tree.getElement()) < precedence(tree.getLeftTree().getElement()))
+                {
+                    result += "(";
+                    result += infixPrint(tree.getLeftTree());
+                    result = result.substring(0, result.length()-1) + ") ";
+                }
+                else
+                {
+                    result += infixPrint( tree.getLeftTree() );
+                }
+            }
+            if(tree.getElement().equals("neg"))//handles when neg is used
+                result += "-";
+            else if(tree.getElement().equals("^"))//handles when exponent sign is used
+                result = result.substring(0, result.length()-1) + "^";
+            else if(tree.getElement().equals("sqrt"))
+                result += tree.getElement();
+            else
+                result += tree.getElement() + " ";
+    //right branch
+            if(tree.getRightTree() != null)
+            {
+                if(precedence(tree.getRightTree().getElement()) >= precedence(tree.getElement()))
+                {
+                    result += "(";
+                    result += infixPrint( tree.getRightTree() );
+                    result = result.substring(0, result.length()-1) + ") ";
+                }
+                else
+                {
+                    result += infixPrint( tree.getRightTree() );
+                }
+            }
         }
-        else
-        {
-          //
-        }
-
-
-
-
-
         return result;
     }//infixPrint()
 

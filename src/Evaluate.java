@@ -48,7 +48,8 @@ public class Evaluate {
          if (right == 0.0)
             throw new ArithmeticException("Divide by zero is undefined!");
          return eval(tree.getLeftTree()) / right;
-      } else if (tree.getElement().equals("%")) {
+      }
+      else if (tree.getElement().equals("%")) {
          double right = eval(tree.getRightTree());
 
          if (right == 0.0)
