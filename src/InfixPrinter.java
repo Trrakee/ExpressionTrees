@@ -1,6 +1,11 @@
-/*
-
-*/
+/**
+ ----------------------------------
+ | Program created by Tushar Sharma.|
+ | CS31600 Homework 2               |
+ | Email: sharm191@pnw.edu          |
+ | File Info: InfixPrinter.java     |
+ ----------------------------------
+ */
 
 /**
  The infixPrint() method takes a BTree that is an expression tree

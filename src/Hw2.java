@@ -1,7 +1,11 @@
-/*
-
-
-*/
+/**
+ ----------------------------------
+ | Program created by Tushar Sharma.|
+ | CS31600 Homework 2               |
+ | Email: sharm191@pnw.edu          |
+ | File Info: Hw2.java              |
+ ----------------------------------
+ */
 
 /**
   This program tests your two expression tree
